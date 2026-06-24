@@ -1,56 +1,59 @@
-# Welcome to your Expo app 👋
+<p align="center">
+  <img src="./assets/images/android-icon-foreground.png" width="150" height="150" alt="Chroma 3D Calculator Logo" />
+</p>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Sobre o Projeto
 
-## Get started
+O Projeto se originou da ideia de simplificar a precificação de produtos impressos em 3D, assim como gerenciar todo o estoque de filamentos e impressoras a disposição
 
-1. Install dependencies
+# Funcionalidades
 
-   ```bash
-   npm install
-   ```
+- Calculo de gasto de filamento
+- Gasto energético
+- Gastos adicionais
+- Margem de lucro
+- Total para venda
 
-2. Start the app
+**O Custo de Energia, por enquanto, está fixo no código interno do programa considerando R$ 0.85/kwh e uma impressora de 250 Watts, proximo Commit terá a opção de alterar**
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Stack Tecnológica
 
-In the output, you'll find options to open the app in a
+- **Framework Principal:** [React Native](https://reactnative.dev/) com [Expo (v51)](https://expo.dev/)
+- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilização:** Core `StyleSheet` do React Native
+- **Navegação & Roteamento:** Expo Router (File-based routing)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ⚙️ Como Executar o Projeto
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em seu computador e o aplicativo **Expo Go** instalado no seu dispositivo Android/iOS para testar.
 
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clonar o repositório e instalar dependências
 
 ```bash
-npm run reset-project
+# Instalar os pacotes necessários
+npm install
+
+2. Iniciar o servidor de desenvolvimento do Expo
+Bash
+
+npx expo start
+
+3. Abrir no celular
+
+    Android: Abra o aplicativo Expo Go no celular e leia o QR Code gerado no terminal.
+
+    Emulador Android/iOS: Pressione a para rodar no Android Studio ou i para o simulador iOS.
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+📐 Estrutura de Pastas do Projeto
+Plaintext
 
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+assets/
+├── images/          # Imagens e logos utilizadas no projeto
+src/
+├── components/
+│   └── ui/          # Componentes menores reutilizaveis como cards, buttons e inputs
+├── hooks/           # Centralização de lógica e estados
+├── screens/         # Principais telas do aplicativo
+```
